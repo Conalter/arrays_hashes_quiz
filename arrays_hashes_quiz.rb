@@ -27,14 +27,19 @@ stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Ha
 #stops.delete_at(1)
 
 # 7. How many stops there are in the array?
-p stops.count()
+#p stops.count()
+
 # 8. How many ways can we return `"Falkirk High"` from the array?
+#p stops[2]
 
 # 9. Reverse the positions of the stops in the array
+#p stops.reverse
 
 # 10. Print out all the stops using a for loop
+for destinations in stops
+p destinations
+end
 
-#p stops
 
 ## Exercise B
 
