@@ -36,9 +36,9 @@ stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Ha
 #p stops.reverse
 
 # 10. Print out all the stops using a for loop
-for destinations in stops
-p destinations
-end
+# for destinations in stops
+# p destinations
+# end
 
 
 ## Exercise B
@@ -104,16 +104,37 @@ users = {
 ### Complete these tasks:
 
 # 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
-# 2. Get Erik's hometown
-# 3. Get the array of Erik's lottery numbers
-# 4. Get the type of Avril's pet Monty
-# 5. Get the smallest of Erik's lottery numbers
-# 6. Return an array of Avril's lottery numbers that are even
-# 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
-# 8. Change Erik's hometown to Edinburgh
-# 9. Add a pet dog to Erik called "Fluffy"
-# 10. Add another person to the users hash
+#p users["Jonathan"][:twitter]
 
+# 2. Get Erik's hometown
+#p users["Erik"][:home_town]
+
+# 3. Get the array of Erik's lottery numbers
+#p users["Erik"][:lottery_numbers]
+
+# 4. Get the type of Avril's pet Monty
+#p users["Avril"][:pets][0][:species]
+
+# 5. Get the smallest of Erik's lottery numbers
+#p users["Erik"][:lottery_numbers][2]
+
+# 6. Return an array of Avril's lottery numbers that are even
+#users["Avril"][:lottery_numbers].each { |x| puts x if x.even? }
+
+# 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
+#p users["Erik"][:lottery_numbers].push(7)
+
+# 8. Change Erik's hometown to Edinburgh
+#users["Erik"][:home_town].replace("Edinburgh")
+#p users
+
+# 9. Add a pet dog to Erik called "Fluffy"
+#users["Erik"][:pets].push(:name => "Fluffy", :species => "dog")
+#p users
+
+# 10. Add another person to the users hash
+# users << ("Steven" => {})
+# p users
 
 ## Exercise C
 
@@ -140,6 +161,12 @@ united_kingdom = [
 ### Complete these tasks:
 
 # 1. Change the capital of Wales from `"Swansea"` to `"Cardiff"`.
+#united_kingdom[1][:capital].replace("Cardiff")
+#p united_kingdom
 # 2. Create a Hash for Northern Ireland and add it to the `united_kingdom` array (The capital is Belfast, and the population is 1,811,000).
+united_kingdom.push(name: "Northern Ireland", population: 1811000, capital: "Belfast") #hash.merge!({:item2 => 2}) .push(:name => "Fluffy", :species => "dog")
+p united_kingdom
+
 # 3. Use a loop to print the names of all the countries in the UK.
+
 # 4. Use a loop to find the total population of the UK.
