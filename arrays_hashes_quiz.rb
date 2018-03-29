@@ -133,8 +133,8 @@ users = {
 #p users
 
 # 10. Add another person to the users hash
-# users << ("Steven" => {})
-# p users
+#users[users] = "Stevie"
+#p users
 
 ## Exercise C
 
@@ -163,10 +163,26 @@ united_kingdom = [
 # 1. Change the capital of Wales from `"Swansea"` to `"Cardiff"`.
 #united_kingdom[1][:capital].replace("Cardiff")
 #p united_kingdom
-# 2. Create a Hash for Northern Ireland and add it to the `united_kingdom` array (The capital is Belfast, and the population is 1,811,000).
-united_kingdom.push(name: "Northern Ireland", population: 1811000, capital: "Belfast") #hash.merge!({:item2 => 2}) .push(:name => "Fluffy", :species => "dog")
-p united_kingdom
 
-# 3. Use a loop to print the names of all the countries in the UK.
+# 2. Create a Hash for Northern Ireland and add it to the `united_kingdom` array (The capital is Belfast, and the population is 1,811,000).
+#united_kingdom.push(name: "Northern Ireland", population: 1811000, capital: "Belfast")
+#p united_kingdom
+
+#3. Use a loop to print the names of all the countries in the UK.
+name = cap
+
+for name in united_kingdom
+ cap[:name]
+end
+
+p name
 
 # 4. Use a loop to find the total population of the UK.
+# total_pop = 0
+# for
+#   population in united_kingdom
+#   total_pop += population[:population]
+#   population[:population] = 0
+# end
+#
+# p "There are" + total_pop.to_s + " people in the UK"
