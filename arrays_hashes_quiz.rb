@@ -31,9 +31,12 @@ stops = [ "Croy", "Cumbernauld", "Falkirk High", "Linlithgow", "Livingston", "Ha
 
 # 8. How many ways can we return `"Falkirk High"` from the array?
 #p stops[2]
+#p stops[-5]
+#p stops.at(2)
+#p stop.at (-5)
 
 # 9. Reverse the positions of the stops in the array
-#p stops.reverse
+#p stops.reverse()
 
 # 10. Print out all the stops using a for loop
 # for destinations in stops
@@ -116,10 +119,19 @@ users = {
 #p users["Avril"][:pets][0][:species]
 
 # 5. Get the smallest of Erik's lottery numbers
-#p users["Erik"][:lottery_numbers][2]
+#p users["Erik"][:lottery_numbers].min()
 
 # 6. Return an array of Avril's lottery numbers that are even
-#users["Avril"][:lottery_numbers].each { |x| puts x if x.even? }
+#p users["Avril"][:lottery_numbers].select {|num| puts num if num.even?}
+# evens = []
+#
+# avrils_numbers = users["Avrils"][:lottery_numbers]
+#
+# for num in avrils_numbers
+#   evens.push(num) if num.even?
+# end
+#
+# p evens
 
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 #p users["Erik"][:lottery_numbers].push(7)
@@ -131,10 +143,32 @@ users = {
 # 9. Add a pet dog to Erik called "Fluffy"
 #users["Erik"][:pets].push(:name => "Fluffy", :species => "dog")
 #p users
+#
+# dog = {
+#   :name => "fluffy",
+#   :species => "dog"
+# }
+#
+# users["Erik"][:pets] << dog
 
 # 10. Add another person to the users hash
 #users[users] = "Stevie"
 #p users
+
+# stuart = {
+#   :twitter => "stoogle",
+#   :lottery_numbers => [2, 4, 6, 78, 34],
+#   :home_town => "Glasgow",
+#   :pets => [
+#     {
+#       :name => "Chairman Meow",
+#       :species => "cat"
+#     }
+#   ]
+# }
+#
+# users["Stuart"] = stuart
+# p users
 
 ## Exercise C
 
@@ -168,24 +202,25 @@ united_kingdom = [
 #united_kingdom.push(name: "Northern Ireland", population: 1811000, capital: "Belfast")
 #p united_kingdom
 
-#3. Use a loop to print the names of all the countries in the UK.
-# name = cap
+# n.i. = {
+#   name: "Northern Ireland",
+#   population: 1811000,
+#   capital: "Belfast"
+# }
 #
-# for name in united_kingdom
-#  cap[:name]
+# united_kingdom << n.i.
+# p united_kingdom
+
+#3. Use a loop to print the names of all the countries in the UK.
+
+# for countries in united_kingdom
+#   p countries[:name]
 # end
-
-for countries in united_kingdom
-  p countries[:name] #{chicken[:age]}"
-end
-
 
 # 4. Use a loop to find the total population of the UK.
-# total_pop = 0
-# for
-#   population in united_kingdom
-#   total_pop += population[:population]
-#   population[:population] = 0
-# end
-#
-# p "There are" + total_pop.to_s + " people in the UK"
+total_pop = 0
+for population in united_kingdom
+  total_pop += population[:population]
+end
+
+p "There are " + total_pop.to_s + " people in the UK"
